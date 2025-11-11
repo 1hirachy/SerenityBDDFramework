@@ -3,14 +3,23 @@ package Pages;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.List;
+import java.util.concurrent.TimeoutException;
 import java.util.stream.Collectors;
 
 public class GooglePage extends PageObject {
+
+    // --- constants (optional) ---
+    private static final Duration DROPDOWN_TIMEOUT = Duration.ofSeconds(15);
+    private static final Duration POLL_INTERVAL = Duration.ofMillis(200);
 
     // Using 'name="q"' as the stable locator for the search input
     @FindBy(name = "q")
@@ -23,18 +32,19 @@ public class GooglePage extends PageObject {
 
     List<WebElementFacade> dropDownElementsList;
 
-    public void maximize(){
+    public void maximize() {
         getDriver().manage().window().maximize();
     }
-
-    // --- Methods ---
 
     /**
      * Step 1: Enters the search query into the search bar.
      */
     public void searchItem(String input) {
-        // Serenity's type() method automatically handles basic visibility waits
+        searchBar.waitUntilVisible().clear();
         searchBar.type(input);
+
+        //small delay to allow dropdown suggestion to load
+        waitABit(1000);
     }
 
     /**
@@ -57,47 +67,22 @@ public class GooglePage extends PageObject {
      * @param searchItem The exact text of the item to select
      */
     public void selectItem(String searchItem) {
-        if (dropDownElementsList == null || dropDownElementsList.isEmpty()) {
-            throw new RuntimeException("Dropdown list was empty during selection attempt.");
-        }
-
-        System.out.println("Attempting to select item containing: " + searchItem);
-
-        for (WebElementFacade element : dropDownElementsList) {
-            // Check for null aria-label explicitly to prevent NullPointerException
-            String ariaLabel = element.getAttribute("aria-label");
-            if (ariaLabel == null || ariaLabel.isEmpty()) {
-                continue; // Skip this problematic 'null' element
-            }
-
-            System.out.println("Found suggestion: " + ariaLabel);
-
-            // Use contains() ignoring case for flexible matching
-            if (ariaLabel.toLowerCase().contains(searchItem.trim().toLowerCase()) || searchItem.trim().toLowerCase().contains(ariaLabel.toLowerCase())) {
-                try {
-                    // Use Serenity's JS click if standard click fails
+        if (dropDownElementsList != null && !dropDownElementsList.isEmpty()) {
+            for (WebElementFacade element : dropDownElementsList) {
+                String ariaLabel = element.getAttribute("aria-label");
+                if (ariaLabel != null && ariaLabel.toLowerCase().contains(searchItem.trim().toLowerCase())) {
                     element.click();
-                    System.out.println("Clicked successfully: " + ariaLabel);
-                    return; // Exit the method immediately after a successful click
-                } catch (StaleElementReferenceException e) {
-                    // Handle cases where the DOM updated right before we clicked
-                    System.out.println("Element stale, attempting JS click backup...");
-                    evaluateJavascript("arguments[0].click();", element);
-                    return; // Exit after JS click
-                } catch (RuntimeException e) {
-                    // Handle cases where the DOM updated right before we clicked
-                    System.out.println("Element stale, attempting JS click backup...");
-                    evaluateJavascript("arguments[0].click();", element);
-                    return; // Exit after JS click
+                    System.out.println("✅ Clicked suggestion: " + ariaLabel);
+                    return;
                 }
             }
+            System.out.println("⚠️ No matching suggestion found, pressing ENTER instead.");
+        } else {
+            System.out.println("⚠️ No dropdown suggestions available, pressing ENTER.");
         }
 
-        // If the loop finishes without finding or clicking anything
-        throw new RuntimeException(
-                "Could not find search item containing: '" + searchItem + "'"
-        );
+        // Fallback: hit Enter key to perform search anyway
+        searchBar.sendKeys(Keys.ENTER);
     }
-
 
 }

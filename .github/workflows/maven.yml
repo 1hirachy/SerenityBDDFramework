@@ -32,7 +32,7 @@ jobs:
       - name: 🧪 Run Serenity Tests
         run: |
           echo "Running Serenity BDD tests using JUnit runner..."
-          mvn clean verify -Dserenity.take.screenshots=FOR_FAILURES
+          mvn clean verify 
 
       - name: 📊 Upload Serenity Report
         if: always()
