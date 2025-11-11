@@ -4,22 +4,13 @@ import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.List;
-import java.util.concurrent.TimeoutException;
-import java.util.stream.Collectors;
 
 public class GooglePage extends PageObject {
 
-    // --- constants (optional) ---
-    private static final Duration DROPDOWN_TIMEOUT = Duration.ofSeconds(15);
-    private static final Duration POLL_INTERVAL = Duration.ofMillis(200);
 
     // Using 'name="q"' as the stable locator for the search input
     @FindBy(name = "q")
