@@ -31,7 +31,7 @@ jobs:
 
       - name: Run Serenity Tests
         run: |
-          mvn clean verify -Dwebdriver.driver=chrome
+          mvn clean verify -Dwebdriver.driver=chrome -Dchrome.switches="--headless=new --no-sandbox --disable-dev-shm-usage --disable-gpu --disable-extensions --window-size=1920,1080"
 
       - name: Upload Serenity Report
         if: always()
