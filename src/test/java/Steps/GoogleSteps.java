@@ -2,12 +2,6 @@ package Steps;
 
 import Pages.GooglePage;
 import net.serenitybdd.annotations.Step;
-import net.serenitybdd.core.pages.PageObject;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-
-import java.util.List;
 
 public class GoogleSteps {
 

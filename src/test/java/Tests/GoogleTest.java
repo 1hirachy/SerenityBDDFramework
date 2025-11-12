@@ -9,7 +9,6 @@ import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -19,7 +18,7 @@ public class GoogleTest {
     @Steps
     GoogleSteps googleSteps;
 
-    @Managed(driver="chrome")
+    @Managed(driver = "chrome")
     WebDriver driver;
 
     Properties prop = new Properties();

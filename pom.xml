@@ -42,15 +42,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- JUnit (if using JUnit directly alongside Serenity) -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
-            <scope>test</scope>
-        </dependency>
-
-        <!-- Add this logging dependency to clear the SLF4J warnings -->
+        <!-- Added this logging dependency to clear the SLF4J warnings -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
@@ -94,7 +86,11 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven.surefire.plugin.version}</version>
                 <configuration>
-                    <skipTests>true</skipTests> <!-- Serenity's Surefire configuration handles test execution -->
+                    <skipTests>false</skipTests> <!-- Serenity's Surefire configuration handles test execution -->
+                    <argLine>--add-opens java.base/java.lang.reflect=ALL-UNNAMED</argLine>
+                    <systemPropertyVariables>
+                        <webdriver.driver>chrome</webdriver.driver>
+                    </systemPropertyVariables>
                 </configuration>
             </plugin>
         </plugins>
