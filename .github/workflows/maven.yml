@@ -24,6 +24,7 @@ jobs:
         uses: browser-action/setup-chrome@v2
         with:
           install-dependencies: true
+          install-chromedriver: true
 
       - name: Verify Chrome installation
         run: google-chrome --version
