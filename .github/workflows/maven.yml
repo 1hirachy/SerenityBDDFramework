@@ -19,19 +19,16 @@ jobs:
         with:
           distribution: temurin
           java-version: '11'
-          cache: maven
 
-      - name: Cache Maven Dependencies
-        uses: actions/cache@v4
-        with:
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-maven-
+      - name: Set up Chrome
+        uses: browser-action/setup-chrome@v1
+
+      - name: Verify Chrome installation
+        uses: google-chrome --version
 
       - name: Run Serenity Tests
         run: |
-          mvn clean verify -Dchrome.switches="--start-maximized --disable-dev-shm-usage --no-sandbox"
+          mvn clean verify -Dwebdriver.driver=chrome
 
       - name: Upload Serenity Report
         if: always()
