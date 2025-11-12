@@ -24,7 +24,7 @@ jobs:
         uses: browser-action/setup-chrome@v1
 
       - name: Verify Chrome installation
-        uses: google-chrome --version
+        run: google-chrome --version
 
       - name: Run Serenity Tests
         run: |
