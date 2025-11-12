@@ -21,7 +21,7 @@ jobs:
           java-version: '11'
 
       - name: Set up Chrome
-        uses: browser-action/setup-chrome@v1
+        uses: browsers-action/setup-chrome@v1
 
       - name: Verify Chrome installation
         run: google-chrome --version
