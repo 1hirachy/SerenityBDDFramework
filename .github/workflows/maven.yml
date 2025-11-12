@@ -21,7 +21,7 @@ jobs:
           java-version: '11'
 
       - name: Set up Chrome
-        uses: browser-action/setup-chrome@v2
+        uses: browser-actions/setup-chrome@v2
         with:
           install-dependencies: true
           install-chromedriver: true
