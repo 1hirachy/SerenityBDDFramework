@@ -65,14 +65,11 @@ The framework uses Serenity BDD’s automatic reporting features. As tests execu
 
 ### Contributing
 
-Contributions are welcome! Please fork the repository and submit a pull request.
+* Contributions are welcome! Please fork the repository and submit a pull request.
 Before submitting:
-
-Follow the existing code style
-
-Add or update tests/step definitions for new features
-
-Ensure the CI pipeline passes without errors
+* Follow the existing code style
+* Add or update tests/step definitions for new features
+* Ensure the CI pipeline passes without errors
 
 ### License
 This project is licensed under the MIT License - see the LICENSE file for details.
