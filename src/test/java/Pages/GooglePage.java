@@ -75,7 +75,7 @@ public class GooglePage extends PageObject {
             String ariaLabel = element.getAttribute("aria-label");
             if (ariaLabel != null && ariaLabel.toLowerCase().contains(searchItem.trim().toLowerCase())) {
                 element.click();
-                System.out.println("✅ Clicked suggestion: " + ariaLabel);
+                //System.out.println("Clicked suggestion: " + ariaLabel);
                 return;
             }
         }

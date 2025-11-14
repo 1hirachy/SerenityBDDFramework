@@ -9,8 +9,6 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "Steps",
         plugin = {"pretty"}
-        )
+)
 public class GoogleTest {
-
-
 }

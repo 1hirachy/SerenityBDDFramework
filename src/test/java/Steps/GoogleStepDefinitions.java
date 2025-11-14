@@ -1,20 +1,15 @@
 package Steps;
 
-import Utils.TestData;
+import com.mycompany.Utils.TestData;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.annotations.Steps;
 
-import java.util.Properties;
-
 public class GoogleStepDefinitions {
 
     @Steps
     GoogleSteps googleSteps;
-
-    Properties prop = new Properties();
-
 
     @Given("the user is on the google page")
     public void the_user_is_on_the_google_page() {

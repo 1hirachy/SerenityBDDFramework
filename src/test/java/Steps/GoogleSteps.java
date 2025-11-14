@@ -1,14 +1,10 @@
 package Steps;
 
 import Pages.GooglePage;
-import net.serenitybdd.annotations.Managed;
 import net.serenitybdd.annotations.Step;
-import org.openqa.selenium.WebDriver;
 
 public class GoogleSteps {
 
-    @Managed(driver = "chrome")
-    WebDriver driver;
     GooglePage googlePage;
 
     @Step
@@ -32,6 +28,5 @@ public class GoogleSteps {
     public void selectItem(String input) {
         googlePage.selectItem(input);
     }
-
 
 }

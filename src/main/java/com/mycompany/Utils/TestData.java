@@ -1,4 +1,4 @@
-package Utils;
+package com.mycompany.Utils;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.util.Properties;
 
 public class TestData {
 
-    private static Properties prop = new Properties();
+    private static final Properties prop = new Properties();
 
     static {
         try {

@@ -1,21 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06c17d75-6fc4-4806-a7fb-c017834e4ed3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Runner/GoogleTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/GooglePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/GooglePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Runner/GoogleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Runner/GoogleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Steps/GoogleStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Steps/GoogleStepDefinitions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Steps/GoogleSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Steps/GoogleSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/GoogleTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Utils/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/Utils/TestData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExportTestResults" outputFolder="$PROJECT_DIR$" userTempatePath="" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -49,6 +55,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.fileTypes"
   }
 }]]></component>
