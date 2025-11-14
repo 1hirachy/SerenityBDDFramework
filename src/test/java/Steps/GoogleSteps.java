@@ -1,10 +1,14 @@
 package Steps;
 
 import Pages.GooglePage;
+import net.serenitybdd.annotations.Managed;
 import net.serenitybdd.annotations.Step;
+import org.openqa.selenium.WebDriver;
 
 public class GoogleSteps {
 
+    @Managed(driver = "chrome")
+    WebDriver driver;
     GooglePage googlePage;
 
     @Step
