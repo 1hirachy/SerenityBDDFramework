@@ -1,8 +1,10 @@
 package Steps;
 
 import Pages.GooglePage;
+import groovy.util.logging.Slf4j;
 import net.serenitybdd.annotations.Step;
 
+@Slf4j
 public class GoogleSteps {
 
     GooglePage googlePage;

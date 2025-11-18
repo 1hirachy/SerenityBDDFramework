@@ -9,12 +9,6 @@
   <component name="ChangeListManager">
     <list default="true" id="06c17d75-6fc4-4806-a7fb-c017834e4ed3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/GooglePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/GooglePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Runner/GoogleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Runner/GoogleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Steps/GoogleStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Steps/GoogleStepDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Steps/GoogleSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Steps/GoogleSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Utils/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/Utils/TestData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,19 +40,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/hira_/IdeaProjects/SerenityBDDFramework",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.fileTypes"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/hira_/IdeaProjects/SerenityBDDFramework&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\hira_\IdeaProjects\SerenityBDDFramework" />
@@ -69,7 +63,7 @@
       <recent name="C:\Users\hira_\IdeaProjects\SerenityBDDFramework\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GoogleTestSuite">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.mycompany.Main" />
       <module name="SerenityBDDFramework" />
@@ -127,7 +121,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GoogleTestSuite" />
         <item itemvalue="Cucumber Java.Feature: GoogleSearch" />
         <item itemvalue="Karate.GoogleSearch" />
         <item itemvalue="Application.Main" />

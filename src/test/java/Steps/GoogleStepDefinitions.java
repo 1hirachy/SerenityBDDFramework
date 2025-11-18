@@ -1,11 +1,13 @@
 package Steps;
 
 import com.mycompany.Utils.TestData;
+import groovy.util.logging.Slf4j;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.annotations.Steps;
 
+@Slf4j
 public class GoogleStepDefinitions {
 
     @Steps
