@@ -1,5 +1,6 @@
 package Pages;
 
+import groovy.util.logging.Slf4j;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import org.openqa.selenium.By;
@@ -8,6 +9,7 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
+@Slf4j
 public class GooglePage extends PageObject {
 
 
@@ -75,7 +77,7 @@ public class GooglePage extends PageObject {
             String ariaLabel = element.getAttribute("aria-label");
             if (ariaLabel != null && ariaLabel.toLowerCase().contains(searchItem.trim().toLowerCase())) {
                 element.click();
-                System.out.println("✅ Clicked suggestion: " + ariaLabel);
+                //System.out.println("Clicked suggestion: " + ariaLabel);
                 return;
             }
         }
